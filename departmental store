@@ -1,0 +1,39 @@
+var accountActivity = [];//this is the charges and debits to the account
+
+
+function checkBalance()
+
+{
+
+alert('hello, my name is omid nassir. welcome to my program. please click okay to continue');
+
+var firstName = prompt('what is your first name?');
+var lastName = prompt('what is your last name?');
+var fullName = firstName + " " + lastName;
+
+
+alert('Hello ' + fullName + '. Please enter the charges and refunds for your shopping this month, please click okay to continue');
+
+var count = 0;
+var total = 100;
+while(count<total)
+{
+	var charge = prompt('please enter charge');
+  var cost = parseInt(charge, 10);
+	accountActivity.push(cost);
+
+	var credit = -prompt('please enter refund');
+	var refund = parseInt(credit, 10);
+	accountActivity.push(refund);	
+	count = (count + cost) - refund;
+	document.write(count);
+
+
+if(count >total)
+
+alert(fullName + ' you are spending too much!');
+document.getElementById('charges').innerHTML = "<li>" + accountActivity.join("</li><li>") + "</li>";
+}
+
+
+}
