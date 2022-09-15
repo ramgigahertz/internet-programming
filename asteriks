@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><table border="1">
+<script>
+var number1 = window.prompt( "how many asterisks", "0" );
+var i=0;
+while(i<number1){
+document.write("*");
+i++;
+}
+</script>
+</table>
+</head>
+<body>
+
+
+
+</body>
+</html>
